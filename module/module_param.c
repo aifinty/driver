@@ -8,9 +8,11 @@
 #include <linux/kernel.h>
 
 int num;
+char *name = NULL;
 int array[5];
 
 module_param(num,int,S_IRUGO);
+module_param(name,charp,S_IRUGO);
 module_param_array(array,int ,NULL,S_IRUGO);
 
 static int __init xx_init(void)
